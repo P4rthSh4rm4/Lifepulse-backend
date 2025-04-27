@@ -49,6 +49,9 @@ app.post('/api/admin/login', (req, res) => {
     res.json({ success: false });
   }
 });
+app.use(cors({
+  origin: 'https://lifepulse-backend-3.onrender.com'
+}));
 
 // PROTECTED SOS FETCH API
 app.get('/api/sos', (req, res) => {
